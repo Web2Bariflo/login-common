@@ -40,9 +40,10 @@ ngOnInit(): void {
       if (response.message === "Login Successfull For  SuperAdmin"){
         const userName = "Mrithyunjay Sahu"
         const UserDataSet = {userName}
+        this.route.navigate(['./admins-view'])
         localStorage.setItem('userData',JSON.stringify(UserDataSet))
       }
-
+//4.240.1.15
 
       else if(response.cat === 'aqua'){
         if (response.message === "Login Successfull For aqua Admin"){
@@ -56,11 +57,11 @@ ngOnInit(): void {
 
     else if(response.cat === 'water'){
         if (response.message === "Login Successfull For waterbody Admin"){
-          window.location.href =`http://localhost:4200/verify-token?category=waterAdmin&token=${token}`
+          window.location.href =`http://4.240.112.100:4200/verify-token?category=waterAdmin&token=${token}`
 
         }
         else{
-          window.location.href =`http://localhost:4200/verify-token?category=waterUser&token=${token}`
+          window.location.href =`http://4.240.112.100:4200/verify-token?category=waterUser&token=${token}`
           
         }
       }
@@ -91,11 +92,13 @@ ngOnInit(): void {
      , (error)=>{
       console.log(error)
     })
+
+  this.userInput=''
+   this.password=''
+
+
   }
 
 
-  onCheck(){
-    const token = 'hfgfhffgfdszv'
-    window.location.href = `http://localhost:4200/token?token=${token}`
-  }
+
 }

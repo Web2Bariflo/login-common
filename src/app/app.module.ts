@@ -21,7 +21,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
-import { MatDialogModule } from '@angular/material/dialog';
+
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -34,13 +34,31 @@ import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { RegisterSuccessComponent } from './register-success/register-success.component';
+import { SuperadminCreateAdminComponent } from './superadmin-create-admin/superadmin-create-admin.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NoviewAccountComponent } from './noview-account/noview-account.component';
+import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { SuperAdminDeleteAdminComponent } from './super-admin-delete-admin/super-admin-delete-admin.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ForgotCheckComponent } from './forgot-check/forgot-check.component';
+import { PasswordSuccessComponent } from './password-success/password-success.component';
+import { OtpCheckComponent } from './otp-check/otp-check.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    RegisterSuccessComponent
+    RegisterSuccessComponent,
+    SuperadminCreateAdminComponent,
+    NoviewAccountComponent,
+    AdminUsersComponent,
+    SuperAdminDeleteAdminComponent,
+    ForgotPasswordComponent,
+    ForgotCheckComponent,
+    PasswordSuccessComponent,
+    OtpCheckComponent
   ],
   imports: [
     AppHttpClientModule,
@@ -51,6 +69,8 @@ import { RegisterSuccessComponent } from './register-success/register-success.co
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
+
     BrowserAnimationsModule,
     MatSelectModule,
     MatIconModule,

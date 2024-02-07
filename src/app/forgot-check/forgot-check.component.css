@@ -162,48 +162,73 @@
 }
 
 .video-container{
-    margin-left: 170px;
+    margin-left: 140px;
 }
 
 .video-shape{
-    height:120px;
-    width: 140px;
+    height:180px;
+    width: 200px;
 
     /* box-shadow: 2px 2px 2px 2px rgba(43, 5, 5, 0.342); */
 }
 
-
-@media screen and (max-width: 768px){
-    .video-container{
-        margin-left: 100px;
-    }
-    
-    .video-shape{
-        height:100px;
-        width: 100px;
-    
-        /* box-shadow: 2px 2px 2px 2px rgba(43, 5, 5, 0.342); */
-    }
-
-    
-.card-container{
-
-    width: 300px;
-   
-  
-}
-
-.input-style{
-    width: 250px;
-    height: 40px;
-
-}
-
-.login-button{
+.error{
+    color: red;
     font-size: 14px;
-    width: 250px;
-   
-    height: 39px;
 }
 
+.profilename{
+
+    border:1px solid #adb5bd;
+
+    border-radius: 15px;
+
+    height:30px;
+
+ 
+
+    display:flex;
+
+    align-items: center;
+
+    min-width: 150px;
+
+
+
+   
+
+ 
+
 }
+
+
+ 
+
+.name-gamil{
+    margin-top: 12px;
+    font-size:15px;
+
+    font-weight: 500;
+
+    font-family:"Roboto";
+
+    font-style: italic;
+
+    margin-right: 5px;
+
+ 
+
+}
+
+.email-input{
+    width: 400px;
+    height: 30px ;
+
+ }
+
+ .check-message{
+    font-weight: 400;
+    font-size: 20px;
+
+    margin: 10px 15px;
+ }

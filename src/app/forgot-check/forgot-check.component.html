@@ -1,0 +1,46 @@
+<div class="margin-top">
+    <div class="login-zip">
+    <div class="video-container " >
+        <video [muted]="true" class="video-shape" autoplay playsinline loop >
+            <source src="./assets/bariflo-logo.mp4" type="video/mp4">
+           </video>
+    </div>
+               
+                <div class="card-container">
+                    <div class="card-header">
+                        <h1 class="heading-login">Welcome</h1>
+                    </div>
+                    <div class="profilename">
+      
+                        <i class="fa-regular fa-circle-user icon mx-2"></i>
+                  
+                   
+                  
+                        <p class="name-gamil">{{email}}</p>
+                  
+                      </div>
+                  
+                      <h1 class="text-center check-message">An Email or number with a verification code was sent to given email </h1>
+      
+                      <form class="email-input mt-3">
+                        <input required='' type='text' [(ngModel)]="code" name="code">
+                        <label alt='Enter code' placeholder='Enter code'></label>
+                    </form>
+                  
+                     <p class="errorMsg">{{error}}</p>
+                  
+                    <button class="login-button" (click)="onOTPCheck()" >Next</button>
+    
+    
+    
+    
+    
+                </div>
+    
+    </div>
+        
+        
+    
+ 
+   
+</div>
