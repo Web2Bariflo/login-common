@@ -10,17 +10,18 @@
     </div>
                
                 <div class="card-container">
+                    <form #formData="ngForm" (ngSubmit)="onLogin()" >
                     <div class="card-header">
                         <h1 class="heading-login">Login</h1>
                     </div>
                     <div class="form-group">
                         <label for="email" class="label-name"></label>
-                        <input id="email" [(ngModel)]='userInput' type="email" class="input-style" placeholder="Email or Phone Number">
+                        <input type="text" id="userInput" name="userInput" [(ngModel)]="userInput" class="input-style" required placeholder="Enter your Email or phone">
     
                     </div>
                     <div class="form-group ">
                         <label for="password" class="label-name"></label>
-                        <input id="password" [(ngModel)]="password"  type="password" class="input-style" placeholder="Password">
+                        <input id="password" [(ngModel)]="password"  type="password" class="input-style" name="password" placeholder="Password">
                         
                     </div>
     
@@ -29,9 +30,11 @@
                         <label for="remember" class="check-style">Remember me</label>
                     </div>
                     
-                    <button class="login-button" (click)="onLogin()" >LOGIN</button>
+                    <button  type="submit"  class="login-button">LOGIN</button>
     
+                </form>
                     <div class="bottom">
+
                         <span>
                         <i class="fa fa-lock lock"></i>
                         <a href="" class="forgot">

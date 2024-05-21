@@ -46,13 +46,22 @@ ngOnInit(): void {
 //4.240.1.15
 
       else if(response.cat === 'aqua'){
+        // if (response.message === "Login Successfull For aqua Admin"){
+        //   window.location.href =`http://4.240.1.15/verify-token?category=aquaAdmin&token=${token}`
+        // }
+        // else{
+        //   window.location.href =`http://4.240.1.15/verify-token?category=aquaUser&token=${token}`
+
+        // }
         if (response.message === "Login Successfull For aqua Admin"){
-          window.location.href =`http://4.240.1.15/verify-token?category=aquaAdmin&token=${token}`
+          window.location.href =`http://13.202.20.94:8000/adminside/verify-token?category=aquaUser&token=${token}&mono=${response.mobno}`
         }
         else{
-          window.location.href =`http://4.240.1.15/verify-token?category=aquaUser&token=${token}`
+          window.location.href =`http://13.202.20.94:8000/users/verify-token?category=aquaUser&token=${token}&mobno=${response.mobno}`
 
         }
+       console.log(response.mobno);
+        
       }
 
     else if(response.cat === 'water'){
