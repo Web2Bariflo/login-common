@@ -38,7 +38,7 @@ ngOnInit(): void {
       const token = response.token
 
       if (response.message === "Login Successfull For  SuperAdmin"){
-        const userName = "Mrithyunjay Sahu"
+        const userName = "Mrityunjay Sahu"
         const UserDataSet = {userName}
         this.route.navigate(['./admins-view'])
         localStorage.setItem('userData',JSON.stringify(UserDataSet))
