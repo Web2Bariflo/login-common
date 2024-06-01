@@ -23,7 +23,7 @@ export class AuthenticationService {
 // 37.91
   onGetDeviceTypes(){
     console.log('hello')
-    return this.http.get<any>('http://4.188.244.11/devicetype_view/')
+    return this.http.get<any>('http://aqua.bariflorobotics.com/api/devicetype_view/')
   }
 
   onSuperAdminCreate(adminDetails:any){
