@@ -48,10 +48,10 @@ ngOnInit(): void {
       else if(response.cat === 'aqua'){
        
         if (response.message === "Login Successfull For aqua Admin"){
-          window.location.href =`http://4.187.145.186/adminside/verify-token?category=aquaUser&token=${token}&mono=${response.mobno}`
+          window.location.href =`https://aqua.bc-pl.com/adminside/verify-token?category=aquaUser&token=${token}&mono=${response.mobno}`
         }
         else{
-          window.location.href =`http://4.187.145.186/users/verify-token?category=aquaUser&token=${token}&mobno=${response.mobno}`
+          window.location.href =`https://aqua.bc-pl.com/users/verify-token?category=aquaUser&token=${token}&mobno=${response.mobno}`
 
         }
        console.log(response.mobno);
