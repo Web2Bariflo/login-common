@@ -10,13 +10,13 @@ export class AuthenticationService {
 
   login(userDetails:any){
     console.log(userDetails);
-    return this.http.post<any>('http://20.244.37.91:8000/log_in/',userDetails)
+    return this.http.post<any>('https://loginbg.bc-pl.com/log_in/',userDetails)
 
   }
   // 20.244.37.91
   onRegister(registerDetails:any){
     console.log(registerDetails);
-    return this.http.post<any>('http://20.244.37.91:8000/regd/',registerDetails)
+    return this.http.post<any>('https://loginbg.bc-pl.com/regd/',registerDetails)
 
   }
 
@@ -28,17 +28,17 @@ export class AuthenticationService {
 
   onSuperAdminCreate(adminDetails:any){
     console.log(adminDetails);
-    return this.http.post<any>('http://20.244.37.91:8000/admincreate/', adminDetails)
+    return this.http.post<any>('https://loginbg.bc-pl.com/admincreate/', adminDetails)
   
   }
 
   DeleteAdmin(mobileno:any){
     const userDelete = {mobno:mobileno}
-    return this.http.post<any>('http://20.244.37.91:8000/admin_delete/',userDelete)
+    return this.http.post<any>('https://loginbg.bc-pl.com/admin_delete/',userDelete)
   
   }
   getDataAdmin() {
-    return this.http.get('http://20.244.37.91:8000/admin_view/');
+    return this.http.get('https://loginbg.bc-pl.com/admin_view/');
   }
 
 
