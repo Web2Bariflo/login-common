@@ -22,7 +22,8 @@ ngOnInit(): void {
   onLogin(){
      
    if (typeof this.userInput === "string" && /^\d+$/.test(this.userInput)){
-    this.mobileno = parseInt(this.userInput);
+    //this.mobileno = parseInt(this.userInput);
+    this.mobileno = this.userInput;
     console.log('num',this.mobileno)
 
  }
@@ -45,13 +46,14 @@ ngOnInit(): void {
       }
 //4.240.1.15
 
-      else if(response.cat === 'aqua'){
+      else if(response.cat == 'aqua'){
        
-        if (response.message === "Login Successfull For aqua Admin"){
+        if (response.message == 'Login Successful For aqua Admin'){
           window.location.href =`https://aqua.bc-pl.com/adminside/verify-token?category=aquaUser&token=${token}&mono=${response.mobno}`
         }
         else{
-          window.location.href =`https://aqua.bc-pl.com/users/verify-token?category=aquaUser&token=${token}&mobno=${response.mobno}`
+          
+           window.location.href =`https://aqua.bc-pl.com/users/verify-token?category=aquaUser&token=${token}&mobno=${response.mobno}`
 
         }
        console.log(response.mobno);
